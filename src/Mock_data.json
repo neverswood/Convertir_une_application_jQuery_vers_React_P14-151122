@@ -1,0 +1,57 @@
+[
+  {
+    "first_name": "Elisa",
+    "last_name": "Gold",
+    "date_of_birth": "02-12-1983",
+    "start_date": "03-05-2013",
+    "state": "Arkansas",
+    "street": "121 Dover Rd",
+    "city": "Memphis",
+    "zip_code": 72301,
+    "department": "Marketing"
+  },
+  {
+    "first_name": "John",
+    "last_name": "Doe",
+    "date_of_birth": "06-10-1986",
+    "start_date": "18-03-2016",
+    "state": "Indiana",
+    "street": "24615 State Rte 19",
+    "city": "Cicero",
+    "zip_code": 46034,
+    "department": "Legal"
+  },
+  {
+    "first_name": "Judy",
+    "last_name": "Stein",
+    "date_of_birth": "01-01-2015",
+    "start_date": "23-02-1990",
+    "state": "North Carolina",
+    "street": "3011 Maplegrove Dr",
+    "city": "Charlotte",
+    "zip_code": 28216,
+    "department": "Sales"
+  },
+  {
+    "first_name": "Nathan",
+    "last_name": "Hotskins",
+    "date_of_birth": "16-11-1989",
+    "start_date": "03-02-2014",
+    "state": "North Carolina",
+    "street": "11270 Mooresville Rd",
+    "city": "Davidson",
+    "zip_code": 28036,
+    "department": "Engineering"
+  },
+  {
+    "first_name": "Haley",
+    "last_name": "Lawson",
+    "date_of_birth": "12-12-1985",
+    "start_date": "05-05-2018",
+    "state": "Virginie",
+    "street": "301 Road",
+    "city": "Palmyra",
+    "zip_code": 22963,
+    "department": "Human Resources"
+  }
+]
