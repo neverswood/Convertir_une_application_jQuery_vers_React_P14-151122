@@ -8,7 +8,7 @@ import { Dropdown } from '../../component/Dropdown/Dropdown';
 import { states } from './StateOptions';
 import DatePicker from 'react-date-picker';
 import { departments } from './DepartmentOptions';
-import { setAdress, setProfile } from '../../features/EmployeeSlice';
+import { setProfile } from '../../features/EmployeeSlice';
 
 export function CreateEmployee() {
   const [firstName, setFirstName] = useState('');
@@ -28,21 +28,19 @@ export function CreateEmployee() {
     e.preventDefault();
     setShowModal(!showModal);
     dispatch(
-      setProfile({
-        firstName: firstName,
-        lastName: lastName,
-        dateOfBirth: dateOfBirth,
-        startDate: startDate,
-        department: department,
-      })
-    );
-    dispatch(
-      setAdress({
-        street: street,
-        city: city,
-        zipCode: zipCode,
-        state: state,
-      })
+      setProfile([
+        {
+          firstName: firstName,
+          lastName: lastName,
+          dateOfBirth: dateOfBirth,
+          startDate: startDate,
+          department: department,
+          street: street,
+          city: city,
+          zipCode: zipCode,
+          state: state,
+        },
+      ])
     );
   };
 
