@@ -1,3 +1,9 @@
+import { Table } from './Table/Table';
+
 export function EmployeeListPage() {
-  return <div>Bob</div>;
+  return (
+    <div>
+      <Table />
+    </div>
+  );
 }
