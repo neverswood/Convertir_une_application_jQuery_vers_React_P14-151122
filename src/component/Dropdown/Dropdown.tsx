@@ -1,13 +1,22 @@
-import { useState, useEffect, MouseEvent, MouseEventHandler } from 'react';
+import {
+  useState,
+  useEffect,
+  MouseEvent,
+  MouseEventHandler,
+  ReactNode,
+} from 'react';
 import './Dropdown.scss';
 
 type DropdownProps = {
   placeholder: string;
-  options: Array<string>;
+  options: Array<{ name: string; value: string }>;
+  optionsValue?: string;
+  option?: string;
   label: string;
   className: string;
-  value: string;
-  onClick: MouseEventHandler<HTMLElement>;
+  value: any;
+  children: ReactNode;
+  onClick?: MouseEventHandler<HTMLElement>;
 };
 
 export function Dropdown({
@@ -16,6 +25,7 @@ export function Dropdown({
   label,
   className,
   value,
+  children,
   onClick,
 }: DropdownProps) {
   const [showMenu, setShowMenu] = useState(false);
@@ -40,20 +50,24 @@ export function Dropdown({
         {!value ? (
           <div className="dropdown-input__placeholder">{placeholder}</div>
         ) : (
-          <div className="dropdown-selected-value" data-value={value}>
-            {value}
-          </div>
+          <div className="dropdown-selected-value">{value}</div>
         )}
         {showMenu && (
           <ul className="dropdown-menu">
-            {options.map((option) => (
-              <li key={option} className="dropdown-item" onClick={onClick}>
-                {option}
+            {options.map((option: { name: string; value: string }) => (
+              <li
+                key={option.name}
+                className="dropdown-item"
+                onClick={onClick}
+                value={option.value}
+              >
+                {option.name}
               </li>
             ))}
           </ul>
         )}
       </div>
+      <div id="errorMessage">{children}</div>
     </div>
   );
 }
