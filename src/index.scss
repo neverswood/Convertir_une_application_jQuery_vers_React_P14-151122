@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: 'Lora', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  width: 194px;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e66fe;
+  box-shadow: 2px 2px 5px #807c7c;
+}

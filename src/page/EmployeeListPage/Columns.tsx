@@ -1,4 +1,4 @@
-import '../Table.scss';
+import './EmployeeList.scss';
 
 export const COLUMNS = [
   {
