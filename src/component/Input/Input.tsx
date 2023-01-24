@@ -34,7 +34,6 @@ export function Input({
           value={value}
           onChange={onChange}
           onClick={click}
-          //required
         ></input>
       </div>
     </React.Fragment>
