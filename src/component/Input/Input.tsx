@@ -7,8 +7,8 @@ type InputProps = {
   type: string;
   id: string;
   placeholder: string;
-  value: string;
-  onChange: ChangeEventHandler<HTMLInputElement>;
+  value?: string;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
   click?: MouseEventHandler<HTMLElement>;
 };
 
@@ -34,6 +34,7 @@ export function Input({
           value={value}
           onChange={onChange}
           onClick={click}
+          //required
         ></input>
       </div>
     </React.Fragment>
