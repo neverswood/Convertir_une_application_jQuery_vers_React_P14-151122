@@ -1,12 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
-import employeeReducer from './features/EmployeeSlice';
+import employeeReducer, { Employee } from './features/EmployeeSlice';
 
 export type State = {
-  employees: [];
+  employees: {
+    data: Employee[];
+  };
 };
 
 export const store = configureStore({
   reducer: {
-    employeeReducer,
+    employees: employeeReducer,
   },
 });

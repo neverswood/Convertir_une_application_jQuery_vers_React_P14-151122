@@ -1,60 +1,34 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { State } from '../Store';
 
 type InitialStateProps = {
-  employees: [];
+  data: Array<object>;
 };
-/*
-[{
-  firstName: string;
-  lastName: string;
-  dateOfBirth: string;
-  startDate: string;
+
+export type Employee = {
+  first_name: string;
+  last_name: string;
+  date_of_birth: string;
+  start_date: string;
   state: string;
   street: string;
   city: string;
-  zipCode: number;
+  zip_code: number;
   department: string;
-}]*/
+};
 
 const initialState: InitialStateProps = {
-  employees: [],
+  data: [],
 };
-/*[
-{
-  firstName: '',
-  lastName: '',
-  dateOfBirth: '',
-  startDate: '',
-  state: '',
-  street: '',
-  city: '',
-  zipCode: 0,
-  department: '',
-}]*/
 
 export const employeeSlice = createSlice({
-  name: 'employee',
+  name: 'employees',
   initialState,
   reducers: {
     setProfile: (state, action) => {
-      console.log('slice', action.payload);
-      state.employees = action.payload;
+      state.data = [...state.data, action.payload];
     },
   },
 });
 
 export const { setProfile } = employeeSlice.actions;
-export const employeesList = (state: State) => state.employees;
 export default employeeSlice.reducer;
-
-/*      state.firstName = action.payload.firstName;
-      state.lastName = action.payload.lastName;
-      state.dateOfBirth = action.payload.dateOfBirth;
-      state.startDate = action.payload.startDate;
-      state.department = action.payload.department;
-      state.state = action.payload.state;
-      state.street = action.payload.street;
-      state.city = action.payload.city;
-      state.zipCode = action.payload.zipCode;
-    },*/
