@@ -13,13 +13,13 @@
     "@types/react-dom": "^18.0.9",
     "date-fns": "^2.29.3",
     "react": "^18.2.0",
+    "react-data-table-component": "^7.5.3",
     "react-date-picker": "^9.1.0",
     "react-dom": "^18.2.0",
     "react-modal-emmanuellets": "^1.0.2",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
-    "react-table": "^7.8.0",
     "sass": "^1.56.1",
     "typescript": "^4.9.3",
     "web-vitals": "^2.1.4"
@@ -51,6 +51,6 @@
     ]
   },
   "devDependencies": {
-    "@types/react-table": "^7.7.12"
+    "@svgr/core": "^6.5.1"
   }
 }
