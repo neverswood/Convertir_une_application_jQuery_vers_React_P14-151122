@@ -1,0 +1,57 @@
+[
+  {
+    "first_name": "Elisa",
+    "last_name": "Gold",
+    "start_date": "03-05-2013",
+    "date_of_birth": "15-02-1982",
+    "department": "sales",
+    "street": "110 w end ave",
+    "city": "Brooklyn",
+    "state": "New York",
+    "zip_code": "11220"
+  },
+  {
+    "first_name": "John",
+    "last_name": "Doe",
+    "start_date": "18-03-2016",
+    "date_of_birth": "12-10-1991",
+    "department": "marketing",
+    "street": "2(From 2 to 98 even)",
+    "city": "Brooklyn",
+    "state": "Alabama",
+    "zip_code": "35007"
+  },
+  {
+    "first_name": "Judy",
+    "last_name": "Stein",
+    "start_date": "23-02-1990",
+    "date_of_birth": "02-02-1987",
+    "department": "engineering",
+    "street": "",
+    "city": "",
+    "state": "",
+    "zip_code": ""
+  },
+  {
+    "first_name": "Nathan",
+    "last_name": "Hotskins",
+    "start_date": "03-02-2014",
+    "date_of_birth": "22-12-1969",
+    "department": "human ressources",
+    "street": "100(From 100 to 198 even)",
+    "city": "Charlotte",
+    "state": "Iowa",
+    "zip_code": "52731"
+  },
+  {
+    "first_name": "Haley",
+    "last_name": "Lawson",
+    "start_date": "05-05-2018",
+    "date_of_birth": "18-06-1975",
+    "department": "legal",
+    "street": "555 sutter st #202",
+    "city": "San Francisco",
+    "state": "California",
+    "zip_code": "94102"
+  }
+]
