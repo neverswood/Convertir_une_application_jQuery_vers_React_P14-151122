@@ -14,14 +14,9 @@ export function SearchBar({
         placeholder=""
         inputName="Search"
         labelFor="Search"
-        labelText="Search"
+        labelText="Search: "
         onChange={change}
       ></Input>
-      <button type="button" id="btnSearch" title="btnSearch">
-        <span>
-          <i className="fas fa-search"></i>
-        </span>
-      </button>
     </div>
   );
 }
