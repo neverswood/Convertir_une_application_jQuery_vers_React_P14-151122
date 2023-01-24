@@ -1,11 +1,12 @@
 import DataTable from 'react-data-table-component';
-import { COLUMNS } from './Table/Columns';
+import { COLUMNS } from './Columns';
 import { useSelector } from 'react-redux';
 import { State } from '../../Store';
-import './Table.scss';
+import './EmployeeList.scss';
 import { SearchBar } from './SearchBar';
 import { useState, useEffect, ChangeEvent } from 'react';
 import { Employee } from '../../features/EmployeeSlice';
+import { useNavigate } from 'react-router-dom';
 
 const customStyles = {
   rows: {
@@ -36,8 +37,13 @@ const customStyles = {
 };
 
 export function EmployeeListPage() {
+  const navigate = useNavigate();
   const data = useSelector((state: State) => state.employees.data);
   const [newData, setNewData] = useState<object[]>([]);
+
+  function ChangePage() {
+    navigate('/');
+  }
 
   useEffect(() => {
     setNewData(data);
@@ -79,6 +85,7 @@ export function EmployeeListPage() {
   return (
     <div className="employeeList">
       <h1>Current Employees</h1>
+      <button onClick={ChangePage}>Home</button>
       <SearchBar
         change={(e: ChangeEvent<HTMLInputElement>) => filterEmployees(e)}
       />
