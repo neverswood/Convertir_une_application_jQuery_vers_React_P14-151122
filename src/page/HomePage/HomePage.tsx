@@ -13,7 +13,13 @@ export function HomePage() {
     <div className="homePage">
       <div className="homePage__view">
         <h1>HRnet</h1>
-        <button onClick={ChangePage}>View Current Employees</button>
+        <button
+          className="button"
+          onClick={ChangePage}
+          aria-label="button navigate"
+        >
+          View Current Employees
+        </button>
       </div>
       <div className="homePage__form">
         <CreateEmployee />

@@ -272,7 +272,11 @@ export function CreateEmployee() {
               </fieldset>
             </div>
           </div>
-          <button type="submit" className="btn-submit">
+          <button
+            type="submit"
+            className="btn-submit button"
+            aria-label="button form"
+          >
             Save
           </button>
         </fieldset>

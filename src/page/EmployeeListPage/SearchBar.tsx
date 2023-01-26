@@ -12,7 +12,7 @@ export function SearchBar({
         type="search"
         id="search-bar"
         placeholder=""
-        inputName="Search"
+        inputName="search"
         labelFor="Search"
         labelText="Search: "
         onChange={change}
