@@ -50,11 +50,8 @@ export function EmployeeListPage() {
   }, [data]);
 
   const filterEmployees = (e: ChangeEvent<HTMLInputElement>) => {
-    let employeesFiltered: Employee[] = [];
-    data.filter((employee: Employee) => {
-      if (e.target.value === '') {
-        return setNewData(data);
-      } else if (
+    const dataFiltered = data.filter((employee: Employee) => {
+      return (
         employee.first_name
           .toLowerCase()
           .includes(e.target.value.toLowerCase()) ||
@@ -74,18 +71,21 @@ export function EmployeeListPage() {
         employee.city.toLowerCase().includes(e.target.value.toLowerCase()) ||
         employee.state.toLowerCase().includes(e.target.value.toLowerCase()) ||
         employee.zip_code.toString().includes(e.target.value.toLowerCase())
-      ) {
-        employeesFiltered.push(employee);
-        setNewData(employeesFiltered);
-      }
-      return data;
+      );
     });
+    setNewData(dataFiltered);
   };
 
   return (
     <div className="employeeList">
       <h1>Current Employees</h1>
-      <button onClick={ChangePage}>Home</button>
+      <button
+        className="button"
+        onClick={ChangePage}
+        aria-label="button navigate"
+      >
+        Home
+      </button>
       <SearchBar
         change={(e: ChangeEvent<HTMLInputElement>) => filterEmployees(e)}
       />
