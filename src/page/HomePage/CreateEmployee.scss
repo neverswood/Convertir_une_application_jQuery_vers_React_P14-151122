@@ -86,20 +86,29 @@
   }
 }
 
-.dropdown-container__department {
+.options-container__department {
   width: 270px;
 }
 
 .btn-submit {
   width: 140px;
   font-size: 15px;
-  background-color: #1e66fe;
-  color: white;
-  border: none;
-  border-radius: 5px;
   padding: 8px;
   margin: 30px 0 10px 0;
-  box-shadow: 2px 2px 5px #807c7c;
+}
+
+.css-13cymwt-control,
+.css-t3ipsp-control {
+  min-height: 26px !important;
+  height: 30px;
+  box-shadow: 3px 3px 3px #807c7c;
+  margin: 2px 0 10px 0;
+}
+
+.css-1fdsijx-ValueContainer,
+.css-1hb7zxy-IndicatorsContainer {
+  position: relative;
+  bottom: 4px;
 }
 
 .errorMessage {

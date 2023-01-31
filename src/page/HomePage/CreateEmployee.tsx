@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import Modal from 'react-modal-emmanuellets';
 import React from 'react';
 import './CreateEmployee.scss';
-import { Dropdown } from '../../component/Dropdown/Dropdown';
+import { SelectOption } from '../../component/SelectOption/SelectOption';
 import { states } from './StateOptions';
 import DatePicker from 'react-date-picker';
 import { departments } from './DepartmentOptions';
@@ -175,14 +175,14 @@ export function CreateEmployee() {
                   ''
                 )}
               </div>
-              <Dropdown
+              <SelectOption
                 value={department}
                 className="departments"
                 label="Department"
                 placeholder="Sales"
                 options={departments}
                 onClick={(e: any) => {
-                  setDepartment(e.currentTarget.textContent);
+                  setDepartment(e.value);
                 }}
                 children={
                   error.has('department') ? (
@@ -193,12 +193,12 @@ export function CreateEmployee() {
                     ''
                   )
                 }
-              ></Dropdown>
+              ></SelectOption>
             </div>
             <div className="adress">
               <fieldset className="adress__fieldset">
                 <legend className="adress__legend">Adress</legend>
-                <Dropdown
+                <SelectOption
                   value={state.name}
                   className="states"
                   label="State"
@@ -206,8 +206,8 @@ export function CreateEmployee() {
                   options={states}
                   onClick={(e: any) => {
                     setState({
-                      name: e.target.textContent,
-                      value: e.target.nodeName,
+                      name: e.label,
+                      value: e.value,
                     });
                   }}
                   children={
@@ -217,7 +217,7 @@ export function CreateEmployee() {
                       ''
                     )
                   }
-                ></Dropdown>
+                ></SelectOption>
                 <Input
                   inputName="input-wrapper"
                   labelFor="street"
