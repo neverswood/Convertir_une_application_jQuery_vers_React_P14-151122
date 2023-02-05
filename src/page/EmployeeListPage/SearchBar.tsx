@@ -1,6 +1,11 @@
 import { ChangeEventHandler } from 'react';
 import { Input } from '../../component/Input/Input';
 
+/**
+ * This is a function searchBar
+ * @param {ChangeEventHandler<HTMLInputElement>} change - The props to onChange
+ */
+
 export function SearchBar({
   change,
 }: {

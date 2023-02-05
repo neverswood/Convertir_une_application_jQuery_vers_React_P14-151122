@@ -1,5 +1,18 @@
 import React, { ChangeEventHandler, MouseEventHandler } from 'react';
 
+/**
+ * This is a Input function
+ * @param {string} inputName - The className of the div that surrounds the label and the input
+ * @param {string} labelFor - The htmlFor in the label
+ * @param {string} labelText - The text of the label
+ * @param {string} type - The type of the input
+ * @param {string} id - The id of the input
+ * @param {string} placeholder - the placeholder of the input
+ * @param {string} value - The value of the input
+ * @param {ChangeEventHandler<HTMLInputElement>} onChange - The onChane of the input
+ * @param {MouseEventHandler<HTMLElement>} click - The onClick of the input
+ */
+
 type InputProps = {
   inputName: string;
   labelFor: string;

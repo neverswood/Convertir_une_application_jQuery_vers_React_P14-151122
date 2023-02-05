@@ -3,6 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import { CreateEmployee } from './CreateEmployee';
 import './HomePage.scss';
 
+/**
+ * Homepage function to display the form for creating an employee. It returns to the page of the list of employees via a button.
+ */
+
 export function HomePage() {
   const navigate = useNavigate();
 

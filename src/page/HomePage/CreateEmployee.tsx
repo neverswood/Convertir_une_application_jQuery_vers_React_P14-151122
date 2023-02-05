@@ -10,6 +10,10 @@ import DatePicker from 'react-date-picker';
 import { departments } from './DepartmentOptions';
 import { setProfile } from '../../features/EmployeeSlice';
 
+/**
+ * Function to create an employee with a form that sends data validated in the localStorage and redux.
+ */
+
 export function CreateEmployee() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -24,6 +28,8 @@ export function CreateEmployee() {
   const [error, setError] = useState<Map<string, string>>(new Map());
   const hideModal = () => showModal && setShowModal(false);
   const dispatch = useDispatch();
+
+  console.log('tokok', department, state.name);
 
   const data = {
     first_name: firstName,
@@ -181,7 +187,7 @@ export function CreateEmployee() {
                 label="Department"
                 placeholder="Sales"
                 options={departments}
-                onClick={(e: any) => {
+                onClick={(e) => {
                   setDepartment(e.value);
                 }}
                 children={

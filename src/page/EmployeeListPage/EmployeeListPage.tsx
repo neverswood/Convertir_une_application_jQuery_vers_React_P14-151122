@@ -36,6 +36,10 @@ const customStyles = {
   },
 };
 
+/**
+ * Function to display the table with the list of employees and to sort this table with the searchbar.
+ */
+
 export function EmployeeListPage() {
   const navigate = useNavigate();
   const data = useSelector((state: State) => state.employees.data);
